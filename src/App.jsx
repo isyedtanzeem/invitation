@@ -1,43 +1,37 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaRegHeart } from "react-icons/fa";
 import "./App.css";
 
 export default function App() {
   return (
     <div className="invitation-container">
-      {/* Floating Flowers Animation */}
+      {/* Door Animation */}
       <motion.div
-        className="floating-flowers"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 3 }}
-      >
-        {[...Array(10)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute text-yellow-200 text-2xl"
-            initial={{ y: -100, opacity: 0 }}
-            animate={{ y: "100vh", opacity: 1 }}
-            transition={{ duration: 15 + Math.random() * 5, delay: i * 0.5 }}
-            style={{ left: `${Math.random() * 100}%` }}
-          >
-            🌸
-          </motion.div>
-        ))}
-      </motion.div>
+        className="door left-door"
+        initial={{ x: 0 }}
+        animate={{ x: "-100%" }}
+        transition={{ duration: 2, ease: "easeInOut" }}
+      ></motion.div>
+      <motion.div
+        className="door right-door"
+        initial={{ x: 0 }}
+        animate={{ x: "100%" }}
+        transition={{ duration: 2, ease: "easeInOut" }}
+      ></motion.div>
 
+      {/* Invitation Details */}
       <motion.div
         className="invitation-card"
         initial={{ scale: 0.8, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 3 }}
+        transition={{ delay: 2, duration: 1.5 }}
       >
         <motion.h1
-          className="text-3xl font-bold text-yellow-200 mb-2"
+          className="text-3xl font-bold text-yellow-200 mb-2 calligraphy-font
+"
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.2, duration: 2 }}
+          transition={{ delay: 2.5, duration: 1 }}
         >
           Valima Invitation
         </motion.h1>
@@ -52,37 +46,37 @@ export default function App() {
         </p>
 
         <motion.h2
-          className="text-4xl font-semibold text-yellow-300 mb-1"
+          className="calligraphy-font"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6, duration: 3 }}
+          transition={{ delay: 3, duration: 1.5 }}
         >
           Syed Tanzeem Ahmed
         </motion.h2>
 
         <motion.div
-          className="text-yellow-100 text-xl mb-1"
+          className="calligraphy-font"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 2, duration: 2 }}
+          transition={{ delay: 3.5, duration: 1 }}
         >
           &amp;
         </motion.div>
 
         <motion.h2
-          className="text-4xl font-semibold text-yellow-300 mb-4"
+          className="calligraphy-font"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 3, duration: 3 }}
+          transition={{ delay: 4, duration: 1.5 }}
         >
-          Muskan
+          Saltanath Muskan
         </motion.h2>
 
         <motion.div
           className="text-yellow-100 text-lg mb-3"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 4, duration: 2 }}
+          transition={{ delay: 4.5, duration: 1 }}
         >
           <p className="text-xl font-semibold text-yellow-200">
             Insha'Allah on 31st August 2025, 7:00 PM
@@ -93,7 +87,7 @@ export default function App() {
           className="venue"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 4.5, duration: 2 }}
+          transition={{ delay: 5, duration: 1 }}
         >
           <p>
             <span className="font-semibold">Venue:</span> AMC Palace, BG Road,

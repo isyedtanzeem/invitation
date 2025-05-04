@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -44,112 +46,66 @@
 /* General Styles */
 body {
   font-family: 'Lateef', serif;
-  background-color: #0a0a2a;
+  background-color: #ffffff;
   background-image: repeating-linear-gradient(
       45deg,
-      rgba(255, 215, 0, 0.1) 0,
-      rgba(255, 215, 0, 0.1) 1px,
+      rgba(75, 0, 130, 0.1) 0,
+      rgba(75, 0, 130, 0.1) 1px,
       transparent 1px,
       transparent 20px
     ),
     repeating-linear-gradient(
       -45deg,
-      rgba(255, 215, 0, 0.1) 0,
-      rgba(255, 215, 0, 0.1) 1px,
+      rgba(75, 0, 130, 0.1) 0,
+      rgba(75, 0, 130, 0.1) 1px,
       transparent 1px,
       transparent 20px
     );
   background-size: cover;
   background-repeat: repeat;
   background-position: center;
+  color: #4b0082;
 }
 
 .text-gold-pattern {
-  color: #ffd700;
+  color: #4b0082;
+  text-shadow: 0 0 10px rgba(75, 0, 130, 0.8), 0 0 20px rgba(75, 0, 130, 0.6);
 }
 
 .invitation-container {
+  position: relative;
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
-  position: relative;
+  background-color: #ffffff;
   overflow: hidden;
-  color: #ffd700;
 }
 
-.floating-flowers {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
-
-.invitation-card {
-  background-color: #0a0a2a;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 1rem;
-  padding: 1.5rem;
-  max-width: 28rem;
-  width: 100%;
+/* Bride Name Styling */
+.bride-name {
+  font-family: 'Alex Brush', cursive; /* Calligraphy font */
+  font-size: 3rem;
+  color: #4b0082;
   text-align: center;
-  z-index: 10;
-  border: 1px solid #ffd700;
-  background-image: repeating-linear-gradient(
-      45deg,
-      rgba(255, 215, 0, 0.05) 0,
-      rgba(255, 215, 0, 0.05) 1px,
-      transparent 1px,
-      transparent 20px
-    ),
-    repeating-linear-gradient(
-      -45deg,
-      rgba(255, 215, 0, 0.05) 0,
-      rgba(255, 215, 0, 0.05) 1px,
-      transparent 1px,
-      transparent 20px
-    );
-  background-size: cover;
+  margin-top: 1rem;
+  text-shadow: 0 0 10px rgba(75, 0, 130, 0.8), 0 0 20px rgba(75, 0, 130, 0.6);
 }
 
-.invitation-card h1,
-.invitation-card h2 {
-  font-family: 'Alex Brush', cursive;
-}
-
-.invitation-card p {
-  font-family: 'Lateef', serif;
-  color: #ffd700;
-}
-
-.venue {
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(5px);
-  padding: 1rem;
-  border-radius: 0.75rem;
-  margin-bottom: 1.5rem;
-  color: #ffd700;
+/* Calligraphy Font Styling */
+.calligraphy-font {
+  font-family: 'Alex Brush', cursive; /* Calligraphy font */
+  font-size: 2.5rem;
+  color: #4b0082;
+  text-align: center;
+  margin: 1rem 0;
+  /* text-shadow: 0 0 10px rgba(192, 108, 252, 0.8), 0 0 20px rgba(75, 0, 130, 0.6); */
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-  .invitation-card {
-    padding: 1rem;
-  }
-
-  .invitation-card h1 {
-    font-size: 2rem;
-  }
-
-  .invitation-card h2 {
-    font-size: 1.5rem;
-  }
-
-  .venue {
-    font-size: 0.875rem;
+  /* Adjustments for smaller screens */
+  body {
+    font-size: 0.9rem;
   }
 }
